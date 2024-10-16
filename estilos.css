@@ -77,6 +77,9 @@ header h1 {
 }
 
 .menu-item h3 {
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
     margin: 15px;
     font-size: 1.5em;
     color: #333;
@@ -130,7 +133,7 @@ footer {
     font-size: 18px;
     font-weight: 500;
 }
-#dulces {
+#otros {
     margin-bottom: 50px;
 }
 
@@ -182,9 +185,9 @@ footer {
 
 /* Modal del carrito */
 .cart-modal {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
-    z-index: 1002; /* Por encima del carrito icon */
+    z-index: 1002;
     left: 0;
     top: 0;
     width: 100%;
@@ -199,7 +202,7 @@ footer {
 
 .cart-modal-content {
     background-color: #fefefe;
-    margin: 10% auto; /* 10% desde arriba y centrado horizontalmente */
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -223,16 +226,38 @@ footer {
 }
 
 .cart-item {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 10px 0;
     border-bottom: 1px solid #ddd;
+    padding: 10px 5px;
+    justify-content: space-between;
+}
+
+.nombreCarrito, .precioCarrito {
+    width: 33%;
+    font-size: 12px;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.cart-item-actions {
+    display: flex;
+    gap: 5px;
+    width: 33%;
+    justify-content: flex-end;
 }
 
 .cart-item-actions button {
-    margin-left: 5px;
-    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
     border: none;
     background-color: #ff6f61;
     color: #fff;
@@ -240,6 +265,35 @@ footer {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
+.cart-item-actions button:hover {
+    background-color: #e65b50;
+}
+
+.cart-item-actions button i {
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.nombreCarrito {
+    width: 33%;
+    font-size: 12px;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+
+
+.cart-item-actions button:hover {
+    background-color: #e65b50;
+}
+
+.increase-qty, .decrease-qty, .remove-item {
+    border: none;
+    padding: 5px 10px;
+}
+
 
 .cart-item-actions button:hover {
     background-color: #e65b50;

@@ -108,8 +108,8 @@ function renderCart() {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('cart-item');
         itemDiv.innerHTML = `
-            <span>${item.nombre}</span>
-            <span>$${item.precio.toFixed(2)} x ${item.cantidad}</span>
+            <span class="nombreCarrito">${item.nombre}</span>
+            <span class="precioCarrito">$${item.precio.toFixed(2)} x ${item.cantidad}</span>
             <div class="cart-item-actions">
                 <button class="increase-qty" data-id="${item.id}"><i class="fa-solid fa-plus"></i></button>
                 <button class="decrease-qty" data-id="${item.id}"><i class="fa-solid fa-minus"></i></button>
