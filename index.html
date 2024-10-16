@@ -12,18 +12,22 @@
 </head>
 <body>
     <header>
-    <h1>Timbas y Frappes de la 50</h1>
-    <nav class="mobile-menu">
-        <ul>
-            <li><a href="#frappes">Frappés</a></li>
-            <li><a href="#machakados">Machakados</a></li>
-            <li><a href="#frappe-de-frutas">Frappe de frutas</a></li>
-            <li><a href="#diablitos">Diablitos</a></li>
-            <li><a href="#smoothies">Smoothies</a></li>
-        </ul>
-    </nav>
-</header>
-
+        <h1>Timbas y Frappes de la 50</h1>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="frappes.html">Frappés</a></li>
+                <li><a href="#machakados">Machakados</a></li>
+                <li><a href="#frappe-de-frutas">Frappe de frutas</a></li>
+                <li><a href="#diablitos">Diablitos</a></li>
+                <li><a href="#smoothies">Smoothies</a></li>
+            </ul>
+        </nav>
+        <!-- Icono del carrito -->
+        <div class="cart-container">
+            <i class="fas fa-shopping-cart" id="cart-icon"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
 
     <main>
         <!-- Spinner de carga -->
@@ -68,8 +72,15 @@
                 <!-- Los ítems se cargarán dinámicamente -->
             </div>
         </section>
-    </main>
 
+        <!-- Dulces -->
+        <section class="menu-section" id="dulces">
+            <h2 class="categorias"></h2>
+            <div class="menu-items">
+                <!-- Los ítems se cargarán dinámicamente -->
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 Timbas y Frappes de la 50. Todos los derechos reservados.</p>
@@ -77,5 +88,7 @@
 
     <!-- Scripts de Firebase -->
     <script type="module" src="firebase-config.js"></script>
+    <!-- Scripts para el carrito -->
+    <script src="cart.js"></script>
 </body>
 </html>

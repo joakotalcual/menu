@@ -37,7 +37,7 @@ header h1 {
 
 /* Secciones del menú */
 .menu-section {
-    padding: 40px 20px;
+    padding: 2% 1%;
 }
 
 .menu-section h2 {
@@ -70,8 +70,9 @@ header h1 {
 }
 
 .menu-item img {
-    width:60%;
-    height: 200px;
+    padding-top: 5%;
+    width:90%;
+    height: 220px;
     object-fit: cover;
 }
 
@@ -79,11 +80,6 @@ header h1 {
     margin: 15px;
     font-size: 1.5em;
     color: #333;
-}
-
-.menu-item p {
-    margin: 0 15px 15px;
-    color: #666;
 }
 
 .price {
@@ -134,56 +130,8 @@ footer {
     font-size: 18px;
     font-weight: 500;
 }
-#smoothies {
+#dulces {
     margin-bottom: 50px;
-}
-/* Responsividad */
-
-/* Para pantallas medianas y pequeñas (hasta 768px) */
-@media (max-width: 768px) {
-    header{
-        margin-top: 10px;
-        padding: 25px 0;
-    }
-    .menu-item {
-        width: calc(50% - 20px); /* Dos ítems por fila */
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-
-    body {
-        padding-top: 30px;  /* Para que el contenido no esté cubierto por el menú fijo */
-    }
-}
-
-/* Para pantallas muy pequeñas (hasta 480px) */
-@media (max-width: 480px) {
-    header{
-        margin-top: 20px;
-        padding: 55px 0;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    .menu-section h2 {
-        font-size: 1.5em;
-    }
-
-    .menu-item {
-        width: 100%; /* Un ítem por fila */
-    }
-
-    .menu-item h3 {
-        font-size: 1.2em;
-    }
-
-    .price {
-        font-size: 1em;
-    }
 }
 
 /* Estilos para el mensaje de error */
@@ -193,3 +141,130 @@ footer {
     padding: 20px;
     font-size: 1.2em;
 }
+/* Icono del carrito */
+.cart-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5em;
+    z-index: 1001;
+    text-shadow: 1px 1px 3px black;
+}
+
+#cart-count {
+    background-color: #ff6f61;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+/* Botón Añadir al carrito */
+.add-to-cart {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #e65b50;
+}
+
+/* Modal del carrito */
+.cart-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1002; /* Por encima del carrito icon */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.cart-modal.show {
+    display: block;
+}
+
+.cart-modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% desde arriba y centrado horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item-actions button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #ff6f61;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-item-actions button:hover {
+    background-color: #e65b50;
+}
+
+.cart-subtotal {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.checkout-button {
+    /* background-color: #4CAF50; */
+    background-color: rgba(128, 128, 128, 0.274);
+    color: white;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    /* cursor: pointer; */
+    width: 100%;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+/* .checkout-button:hover {
+    background-color: #45a049;
+} */

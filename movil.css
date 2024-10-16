@@ -1,0 +1,64 @@
+/* Responsividad */
+
+/* Para pantallas medianas y pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    header{
+        margin-top: 10px;
+        padding-top: 10%;
+        padding-bottom: 7%;
+    }
+    .menu-item {
+        width: calc(50% - 20px); /* Dos ítems por fila */
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    body {
+        padding-top: 30px;  /* Para que el contenido no esté cubierto por el menú fijo */
+    }
+    #dulces {
+        margin-bottom: 80px;
+    }
+}
+
+/* Para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+    header{
+        margin-top: 20px;
+        padding: 55px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .menu-section h2 {
+        font-size: 1.5em;
+    }
+
+    .menu-item {
+        width: 46%; /* Un ítem por fila */
+    }
+
+    .menu-item h3 {
+        font-size: 1.2em;
+    }
+
+    .price {
+        font-size: 1em;
+    }
+    #dulces {
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 280px) {
+    header {
+        padding-top: 45%;
+    }
+    .menu-item {
+        width: 100%; /* Un ítem por fila */
+    }
+}

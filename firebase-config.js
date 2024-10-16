@@ -45,8 +45,8 @@ async function cargarMenu() {
                     menuItem.innerHTML = `
                         <img src="images/${nombreArchivo}" alt="${data.nombre}">
                         <h3>${data.nombre}</h3>
-                        <p>${data.descripcion || ""}</p>
                         <span class="price">$${data.precio}</span>
+                        <button class="add-to-cart" data-id="${productoDoc.id}" data-nombre="${data.nombre}" data-precio="${data.precio}">Añadir al carrito</button>
                     `;
 
                     categoriaSection.appendChild(menuItem);
@@ -57,6 +57,8 @@ async function cargarMenu() {
         }
 
         loader.style.display = 'none';
+        const event = new Event('menuLoaded');
+        window.dispatchEvent(event);
     } catch (error) {
         console.error("Error al cargar el menú:", error);
         loader.textContent = "Hubo un error al cargar el menú. Por favor, inténtalo más tarde.";
@@ -64,3 +66,4 @@ async function cargarMenu() {
 }
 
 window.addEventListener('DOMContentLoaded', cargarMenu);
+
